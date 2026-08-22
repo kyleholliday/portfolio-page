@@ -197,7 +197,7 @@ export const projects = [
 ];
 
 export const footer = {
-  text: "This site was made with React and Tailwind CSS by",
+  text: "This site was made with React and Tailwind by",
   authorName: "Kyle Holliday",
   authorUrl: "https://github.com/kyleholliday/portfolio2024",
   hostingText: "and is hosted via",
