@@ -104,7 +104,7 @@ export const experience = [
     url: "https://www.signupgenius.com/",
     description:
       "Coded dynamic and responsive applications, landing pages and emails. Designed multiple applications, landing pages, and emails in a team-based environment using tools such as Sketch and Invision Freehand. Worked on and with multiple teams in tandem (UI/UX, Development, Marketing, and Testing) to produce the best product in the least amount of time.",
-    technologies: ["JavaScript", "React", "Angular", "TypeScript", "CSS/SCSS"],
+    technologies: ["JavaScript", "React", "Angular", "CSS/SCSS"],
   },
 ];
 
@@ -142,7 +142,15 @@ export const companies = [
 export const skills = [
   {
     category: "Programming Languages",
-    items: ["JavaScript", "TypeScript", "HTML", "CSS/SCSS"],
+    items: [
+      "JavaScript",
+      "TypeScript",
+      "HTML5",
+      "CSS/SCSS",
+      "SQL/PostgreSQL",
+      "PHP",
+      "ColdFusion",
+    ],
   },
   {
     category: "Libraries & Frameworks",
@@ -158,6 +166,7 @@ export const skills = [
       "Vercel",
       "Bitbucket",
       "Docker",
+      "Supabase",
       "Craft CMS",
       "Sanity CMS",
       "Jira",
@@ -183,13 +192,7 @@ export const projects = [
     description:
       "Movie and TV database app that utilizes React, TypeScript, and a handful of APIs. Discover a world of entertainment with over a million movies and TV shows. From upcoming and newly released blockbusters to trending TV.",
     note: "*Updated as of 2025",
-    technologies: [
-      "React",
-      "TypeScript",
-      "Tailwind",
-      "REST APIs",
-      "PostgreSQL",
-    ],
+    technologies: ["React", "PostgreSQL", "REST APIs", "Supabase"],
   },
 ];
 
