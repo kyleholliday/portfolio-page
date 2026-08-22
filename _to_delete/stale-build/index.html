@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="theme-color"
       media="(prefers-color-scheme: light)"
@@ -16,8 +16,6 @@
       media="(prefers-color-scheme: dark)"
       content="#27272a"
     />
-
-    <!-- Primary Meta Tags -->
     <title>Kyle Holliday | Full Stack Developer + Designer</title>
     <link rel="canonical" href="https://www.kyleholliday.com/" />
     <meta
@@ -29,8 +27,6 @@
       content="Kyle Holliday is a Full Stack Developer and Designer based in Charlotte, NC specializing in React, TypeScript, Angular, PostgreSQL/SQL, and accessible web applications. Portfolio and contact information."
     />
     <meta name="author" content="Kyle Holliday" />
-
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.kyleholliday.com/" />
     <meta property="og:site_name" content="Kyle Holliday" />
@@ -52,8 +48,6 @@
       property="og:image:alt"
       content="Kyle Holliday — Full Stack Developer + Designer, Charlotte, NC"
     />
-
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://www.kyleholliday.com/" />
     <meta
@@ -68,16 +62,12 @@
       name="twitter:image"
       content="https://www.kyleholliday.com/og-image.png"
     />
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Structured data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -114,32 +104,27 @@
         ]
       }
     </script>
-
-    <!--
-      Set the theme class before first paint. Without this, the class is only
-      applied after React mounts, so dark-mode visitors get a white flash on
-      every load.
-    -->
     <script>
-      (function () {
+      !(function () {
         try {
-          var stored = localStorage.theme;
-          var dark =
-            stored === "dark" ||
-            (stored !== "light" &&
-              window.matchMedia("(prefers-color-scheme: dark)").matches);
-          if (dark) document.documentElement.classList.add("dark");
+          var e = localStorage.theme;
+          ("dark" === e ||
+            ("light" !== e &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches)) &&
+            document.documentElement.classList.add("dark");
         } catch (e) {}
       })();
     </script>
+    <script defer="defer" src="/static/js/main.5f6955b9.js"></script>
+    <link href="/static/css/main.ab45d8e5.css" rel="stylesheet" />
   </head>
   <body>
-    <noscript>
-      You need to enable JavaScript to view Kyle Holliday's portfolio. You can
+    <noscript
+      >You need to enable JavaScript to view Kyle Holliday's portfolio. You can
       also reach me on
       <a href="https://www.linkedin.com/in/kyle-holliday/">LinkedIn</a> or view
-      my <a href="/Kyle-Holliday-Resume-Master.pdf">resume (PDF)</a>.
-    </noscript>
+      my <a href="/Kyle-Holliday-Resume-Master.pdf">resume (PDF)</a>.</noscript
+    >
     <div id="root"></div>
   </body>
 </html>

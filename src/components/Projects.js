@@ -5,10 +5,14 @@ export default function Projects() {
     <section
       id="projects"
       className="mb-12 scroll-mt-16 md:mb-18 lg:mb-24 lg:scroll-mt-24"
+      aria-labelledby="projects-heading"
     >
       <div className="mb-8">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-gray-200">
-          Featured Project
+        <h2
+          id="projects-heading"
+          className="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-gray-200"
+        >
+          {projects.length === 1 ? "Featured Project" : "Featured Projects"}
         </h2>
       </div>
       <div>
@@ -28,13 +32,21 @@ export default function Projects() {
                   {/* Image */}
                   <div className="relative z-10 mb-4">
                     <div className="relative overflow-hidden rounded-xl border-2 border-gray-200/20 transition-all duration-300 group-hover:border-gray-200/40 dark:border-gray-700/30 dark:group-hover:border-gray-600/50 group-hover:shadow-xl">
-                      <img
-                        alt={`${project.title} screenshot`}
-                        loading="lazy"
-                        decoding="async"
-                        className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                        src={project.image}
-                      />
+                      <picture>
+                        <source
+                          srcSet={project.image}
+                          type="image/webp"
+                        />
+                        <img
+                          alt={`Screenshot of the ${project.title} app`}
+                          loading="lazy"
+                          decoding="async"
+                          width={project.imageWidth}
+                          height={project.imageHeight}
+                          className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                          src={project.imageFallback || project.image}
+                        />
+                      </picture>
                     </div>
                   </div>
 

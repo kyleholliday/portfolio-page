@@ -3,10 +3,16 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   line-height: 1.6;
+}
+
+/* Only animate scrolling for people who haven't asked us not to. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 html.dark {
@@ -26,4 +32,36 @@ html.dark {
       rgba(255, 255, 255, 0.015) 2px,
       rgba(255, 255, 255, 0.015) 4px
     );
+}
+
+/*
+ * Active state for the sticky in-page nav. The markup has always carried an
+ * `.active` class, but nothing ever styled it — these are the rules that make
+ * the scroll-spy highlight visible.
+ */
+.nav a.active .nav-indicator {
+  width: 4rem;
+  background-color: rgb(37 99 235); /* blue-600 */
+}
+
+.nav a.active .nav-text {
+  color: rgb(15 23 42); /* slate-900 */
+}
+
+html.dark .nav a.active .nav-indicator {
+  background-color: rgb(16 185 129); /* emerald-500 */
+}
+
+html.dark .nav a.active .nav-text {
+  color: rgb(243 244 246); /* gray-100 */
+}
+
+/* Visible keyboard focus everywhere, without the mouse-click ring. */
+:focus-visible {
+  outline: 2px solid rgb(37 99 235);
+  outline-offset: 3px;
+}
+
+html.dark :focus-visible {
+  outline-color: rgb(16 185 129);
 }

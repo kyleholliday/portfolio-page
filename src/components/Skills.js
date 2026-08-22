@@ -5,10 +5,13 @@ export default function Skills() {
     <section
       id="skills"
       className="mb-12 scroll-mt-16 md:mb-18 lg:mb-24 lg:scroll-mt-24"
-      aria-label="skills"
+      aria-labelledby="skills-heading"
     >
       <div className="mb-8">
-        <h2 className="text-md font-bold uppercase tracking-widest text-slate-900 dark:text-gray-200">
+        <h2
+          id="skills-heading"
+          className="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-gray-200"
+        >
           Skills
         </h2>
       </div>
@@ -42,9 +45,10 @@ export default function Skills() {
         <div className="mt-24">
           <a
             className="inline-flex items-center gap-2 rounded-lg bg-blue-600 dark:bg-emerald-600 px-6 py-3 text-base font-semibold text-white shadow-lg hover:bg-blue-700 dark:hover:bg-emerald-700 transition-all hover:shadow-xl hover:scale-105"
-            aria-label="View Resume"
-            href="/kyle-holliday-resume.pdf"
+            aria-label="View resume (PDF, opens in a new tab)"
+            href="/Kyle-Holliday-Resume-Master.pdf"
             target="_blank"
+            rel="noopener"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

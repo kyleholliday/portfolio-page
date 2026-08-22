@@ -5,9 +5,13 @@ export default function About() {
     <section
       id="about"
       className="mb-12 scroll-mt-16 md:mb-18 lg:mb-24 lg:scroll-mt-24"
+      aria-labelledby="about-heading"
     >
       <div className="mb-8">
-        <h2 className="text-md font-bold uppercase tracking-widest text-slate-900 dark:text-gray-200">
+        <h2
+          id="about-heading"
+          className="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-gray-200"
+        >
           About
         </h2>
       </div>

@@ -5,15 +5,18 @@ export default function Experience() {
     <section
       id="experience"
       className="mb-12 scroll-mt-16 md:mb-18 lg:scroll-mt-24"
-      aria-label="experience"
+      aria-labelledby="experience-heading"
     >
       <div className="mb-8">
-        <h2 className="text-md font-bold uppercase tracking-widest text-slate-900 dark:text-gray-200">
+        <h2
+          id="experience-heading"
+          className="text-sm font-bold uppercase tracking-widest text-slate-900 dark:text-gray-200"
+        >
           Experience
         </h2>
       </div>
       <div>
-        <ol>
+        <ol className="group/list">
           {experience.map((job, index) => (
             <li key={index} className="mb-12">
               <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">

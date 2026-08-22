@@ -1,8 +1,11 @@
 export const personalInfo = {
   name: "Kyle Holliday",
   title: "Full Stack Developer + Designer",
+  location: "Charlotte, NC",
   description:
     "I like to build and design mobile-friendly, accessible products that provide a great user experience.",
+  // Change this if you'd rather route contact through a form or a different address.
+  email: "kholliday88@gmail.com",
 };
 
 export const aboutContent = [
@@ -26,11 +29,18 @@ export const socialLinks = [
     url: "https://www.linkedin.com/in/kyle-holliday/",
     icon: "linkedin",
   },
+  {
+    name: "Email",
+    url: "mailto:kholliday88@gmail.com",
+    icon: "email",
+  },
 ];
 
 export const navigation = [
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
+  { name: "Companies", href: "#companies" },
+  { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
 ];
 
@@ -98,6 +108,37 @@ export const experience = [
   },
 ];
 
+/*
+ * Logo grid.
+ *
+ * Each entry renders a wordmark by default. To use a real logo instead, drop the
+ * file in /public and add a `logo` key:
+ *
+ *   { name: "Premier Inc.", url: "...", logo: "/logos/premier.svg" }
+ *
+ * SVG is strongly preferred — it stays sharp and the grayscale/hover treatment
+ * works on it cleanly. Only add logos you have permission to display.
+ */
+export const companies = [
+  {
+    label: "Worked at",
+    items: [
+      { name: "Premier Inc.", url: "https://www.premierinc.com" },
+      { name: "First Citizens Bank", url: "https://www.firstcitizens.com/" },
+      { name: "CapTech", url: "https://www.captechconsulting.com" },
+      { name: "SignUpGenius", url: "https://www.signupgenius.com/" },
+    ],
+  },
+  {
+    label: "Built for",
+    items: [
+      { name: "Bank of America", url: "https://www.bankofamerica.com" },
+      { name: "Capital One", url: "https://www.capitalone.com" },
+      { name: "PGA Tour", url: "https://www.pgatour.com" },
+    ],
+  },
+];
+
 export const skills = [
   {
     category: "Programming Languages",
@@ -135,7 +176,10 @@ export const projects = [
   {
     title: "Bijou",
     url: "https://www.bijou-movies.com",
-    image: "bijou-2025.png",
+    image: "bijou-2025.webp",
+    imageFallback: "bijou-2025.jpg",
+    imageWidth: 1200,
+    imageHeight: 1124,
     description:
       "Movie and TV database app that utilizes React, TypeScript, and a handful of APIs. Discover a world of entertainment with over a million movies and TV shows. From upcoming and newly released blockbusters to trending TV.",
     note: "*Updated as of 2025",
@@ -150,7 +194,7 @@ export const projects = [
 ];
 
 export const footer = {
-  text: "This site was made with React, TypeScript, and SCSS/Tailwind by",
+  text: "This site was made with React and Tailwind CSS by",
   authorName: "Kyle Holliday",
   authorUrl: "https://github.com/kyleholliday/portfolio2024",
   hostingText: "and is hosted via",
