@@ -30,7 +30,7 @@ export default function Projects() {
                   <div className="absolute -inset-x-4 -inset-y-6 z-0 rounded-2xl bg-zinc-100/50 opacity-0 transition-all duration-300 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6"></div>
 
                   {/* Image */}
-                  <div className="relative z-10 mb-4">
+                  {/* <div className="relative z-10 mb-4">
                     <div className="relative overflow-hidden rounded-xl border-2 border-gray-200/20 transition-all duration-300 group-hover:border-gray-200/40 dark:border-gray-700/30 dark:group-hover:border-gray-600/50 group-hover:shadow-xl">
                       <picture>
                         <source
@@ -48,7 +48,7 @@ export default function Projects() {
                         />
                       </picture>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Content */}
                   <div className="relative z-10">
